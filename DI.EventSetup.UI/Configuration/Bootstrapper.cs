@@ -15,6 +15,8 @@ namespace DI.EventSetup.UI.Configuration
         public Bootstrapper()
         {
             Initialize();
+            _container = new SimpleContainer();
+            _container.AddAllDependencies();
         }
 
         protected override void OnStartup(object sender, StartupEventArgs e)
