@@ -75,6 +75,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Activity.cs" />
+    <Compile Include="Models\ActivityFiles.cs" />
+    <Compile Include="Models\ActivityResults.cs" />
+    <Compile Include="Models\City.cs" />
+    <Compile Include="Models\Country.cs" />
+    <Compile Include="Models\Direction.cs" />
+    <Compile Include="Models\Enumerations\EventStatus.cs" />
+    <Compile Include="Models\Enumerations\Gender.cs" />
+    <Compile Include="Models\Enumerations\UserRole.cs" />
+    <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\EventUserRole.cs" />
+    <Compile Include="Models\File.cs" />
+    <Compile Include="Models\Group.cs" />
+    <Compile Include="Models\LoginInfo.cs" />
+    <Compile Include="Models\Task.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserGroup.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
