@@ -75,6 +75,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccess\Configuration\DataContext.cs" />
     <Compile Include="Models\Activity.cs" />
     <Compile Include="Models\ActivityFiles.cs" />
     <Compile Include="Models\ActivityResults.cs" />
