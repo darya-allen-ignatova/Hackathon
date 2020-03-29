@@ -79,6 +79,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Configuration\Bootstrapper.cs" />
+    <Page Include="Controls\EventListView\EventListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EventDetails\EventDetailsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Main\MainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -86,6 +94,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\DependenciesConfigurator.cs" />
+    <Compile Include="Configuration\EntityModel.cs" />
+    <Compile Include="Controls\EventListView\EventListViewModel.cs" />
+    <Compile Include="Controls\EventListView\EventViewModel.cs" />
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\EnumBooleanConverter.cs" />
+    <Compile Include="EventDetails\EventDetailsViewModel.cs" />
     <Compile Include="Main\MainViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -123,6 +137,15 @@
     <Analyzer Include="..\packages\Microsoft.NetCore.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetCore.CSharp.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetFramework.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.8\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DI.EventSetup.Business\DI.EventSetup.Business.csproj">
+      <Project>{4EC8E6F6-1D6F-4317-867A-AD5B0D5D31AB}</Project>
+      <Name>DI.EventSetup.Business</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Styles\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
