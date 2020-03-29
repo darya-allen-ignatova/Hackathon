@@ -37,6 +37,7 @@ namespace DI.EventSetup.UI.Configuration
             container.PerRequest<IServiceBase<Task>, ServiceBase<Task>>();
             container.PerRequest<IServiceBase<User>, ServiceBase<User>>();
             container.PerRequest<IServiceBase<UserGroup>, ServiceBase<UserGroup>>();
+            container.PerRequest<IEventService, EventService>(); 
         }
 
         private static void AddRepositoryDependencies(this SimpleContainer container)

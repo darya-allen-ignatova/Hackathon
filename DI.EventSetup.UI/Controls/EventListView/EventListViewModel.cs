@@ -1,11 +1,10 @@
 ﻿using Caliburn.Micro;
 using DI.EventSetup.Business.ReadModels;
-using DI.EventSetup.UI.Controls.EventListView;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DI.EventSetup.UI.Controls
+namespace DI.EventSetup.UI.Controls.EventListView
 {
     public class EventListViewModel : Screen
     {
