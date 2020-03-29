@@ -1,0 +1,40 @@
+﻿<Window x:Class="DI.EventSetup.UI.Controls.EventListView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DI.EventSetup.UI.Controls"
+        mc:Ignorable="d"
+        Title="EventListView" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Направление" Grid.Column="1" Grid.Row="0"/>
+        <TextBox Name="Directions" Grid.Row="0" Grid.Column="2"/>
+        
+        <Label Content="Дата мероприятия" Grid.Column="1" Grid.Row="1"/>
+        <TextBox Name="EventDates" Grid.Row="1" Grid.Column="2"/>
+
+        <ListView Name="Events" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Логотип" Width="150">
+                        <!--<Image Name="Logo"/>-->
+                    </GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Name}" Width="200" Header="Наименование мероприятия"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Direction}" Width="130" Header="Направление"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Date}" Width="130" Header="Дата"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
